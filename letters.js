@@ -65,12 +65,12 @@ function userGuess(wArray, bArray, x) {
             guessesLeft--
             console.log(chalk.yellow("You have " + chalk.magenta(guessesLeft) + " guesses left"))
             var joinedArray = bArray.join(" ")
-            console.log(chalk.blue(joinedArray))
+            console.log(chalk.bold.cyan(joinedArray))
         } else {
             var joinedArray = bArray.join(" ")
             console.log(chalk.green("CORRECT"))
 
-            console.log(chalk.blue(joinedArray))
+            console.log(chalk.bold.cyan(joinedArray))
         }
 
 
@@ -78,9 +78,9 @@ function userGuess(wArray, bArray, x) {
             this.getInput()
         } else {
             if (correctLetters === x.length) {
-                console.log(chalk.bold.green("YOU ARE A WINNER"))
+                console.log(chalk.bold.green("YOU ARE A WINNER!"))
             } else {
-                console.log(chalk.bold.red("Sorry you lose. The word was", chalk.cyan(x) + " Let's Play Again"))
+                console.log(chalk.bold.red("Sorry you lose. The word was", chalk.cyan(x) + ". Let's Play Again!"))
 
             }
         }
