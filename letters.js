@@ -2,7 +2,9 @@ var inquirer = require("inquirer")
 const chalk = require('chalk');
 
 function userGuess(wArray, bArray, x) {
-    console.log(bArray)
+    var joinedArray = bArray.join(" ")
+    console.log(wArray)
+    console.log(joinedArray)
     this.wArray = wArray;
     this.bArray = bArray;
     this.x = x;
@@ -34,7 +36,7 @@ function userGuess(wArray, bArray, x) {
 
                 })
                 lettersGuessed.push(userInput)
-
+                console.log("You have selected letter(s): ", lettersGuessed)
                 if (repeatedLetter) {
                     console.log("You have already picked that letter. Please pick another.")
                     self.getInput();
@@ -52,18 +54,24 @@ function userGuess(wArray, bArray, x) {
 
             if (userInput === arrayLetter) {
                 foundOne = true;
-                console.log(chalk.green("CORRECT"))
                 bArray[index] = userInput;
                 correctLetters++
-                console.log(chalk.blue(bArray))
+
             }
 
         })
+
         if (foundOne === false) {
             console.log(chalk.red("INCORRECT"))
             guessesLeft--
             console.log(chalk.yellow("You have " + chalk.magenta(guessesLeft) + " guesses left"))
+        } else {
+            var joinedArray = bArray.join(" ")
+            console.log(chalk.green("CORRECT"))
+
+            console.log(chalk.blue(joinedArray))
         }
+
 
         if (correctLetters !== x.length && guessesLeft !== 0) {
             this.getInput()
