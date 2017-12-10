@@ -1,0 +1,24 @@
+{
+  "name": "node_hangman",
+  "version": "1.0.0",
+  "description": "hangman game played in terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kurtis-Roberts/node-hangman.git"
+  },
+  "author": "Kurtis Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kurtis-Roberts/node-hangman/issues"
+  },
+  "homepage": "https://github.com/Kurtis-Roberts/node-hangman#readme",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "inquirer": "^4.0.1",
+    "random-word": "^2.0.0"
+  }
+}
