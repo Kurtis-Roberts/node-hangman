@@ -3,7 +3,6 @@ const chalk = require('chalk');
 
 function userGuess(wArray, bArray, x) {
     var joinedArray = bArray.join(" ")
-    console.log(wArray)
     console.log(joinedArray)
     this.wArray = wArray;
     this.bArray = bArray;
@@ -36,7 +35,7 @@ function userGuess(wArray, bArray, x) {
 
                 })
                 lettersGuessed.push(userInput)
-                console.log("You have selected letter(s): ", lettersGuessed)
+                console.log(chalk.gray("You have selected letter(s): ", lettersGuessed))
                 if (repeatedLetter) {
                     console.log("You have already picked that letter. Please pick another.")
                     self.getInput();
