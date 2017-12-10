@@ -64,6 +64,8 @@ function userGuess(wArray, bArray, x) {
             console.log(chalk.red("INCORRECT"))
             guessesLeft--
             console.log(chalk.yellow("You have " + chalk.magenta(guessesLeft) + " guesses left"))
+            var joinedArray = bArray.join(" ")
+            console.log(chalk.blue(joinedArray))
         } else {
             var joinedArray = bArray.join(" ")
             console.log(chalk.green("CORRECT"))
